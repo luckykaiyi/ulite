@@ -1,0 +1,11 @@
+{
+  "name": "ulite",
+  "version": "1.0.0",
+  "description": "infor-u-mation lite",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luckykaiyi",
+  "license": "ISC"
+}

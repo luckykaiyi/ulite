@@ -1,0 +1,7 @@
+<!--detail.wxml-->
+<view class="job" wx:if="{{job}}">
+  <view class="title">
+    {{job.title}}
+  </view>
+  <rich-text nodes="{{job.content}}" class="content"></rich-text>
+</view>

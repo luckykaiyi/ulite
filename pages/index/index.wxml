@@ -1,10 +1,17 @@
 <!--index.wxml-->
-<view class="container">
-  <!--<view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class="topics">
+  <view class="topic" wx:for="{{topics}}">
+    <navigator class="infos" url="../list/list?id={{item.topicId}}">
+      <view class="name"> {{item.topic}}</view>
+      <view class="total"> Total: {{item.total}}</view>
+    </navigator>
+    <view class="jobs">
+      <block wx:for="{{item.jobs}}" wx:for-item="job">
+        <navigator class="job" url="../detail/detail?id={{job.id}}">
+          <text class="source">{{job.source}}</text>
+          <text>{{job.title}}</text>
+        </navigator>   
+      </block>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>-->
 </view>

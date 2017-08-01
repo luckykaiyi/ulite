@@ -1,18 +1,15 @@
-/**index.wxss**/
+/**list.wxss**/
 page {
   background: #efefef;
 }
-.topics {
-  padding: 30rpx 40rpx; 
-  font-size: 30rpx;
-}
 .topic {
   margin-bottom: 30rpx;
+  font-size: 30rpx;
 }
 .infos {
   display: flex;
   padding: 20rpx 40rpx;
-  background: #09bb07;
+  background-color: #09bb07;
   color: #fff;
   font-size: 32rpx;
   font-weight: bold;
@@ -21,7 +18,7 @@ page {
   flex: 1;
 }
 .jobs {
-  background: rgba(158, 158, 158, 0.07);
+  background-color: rgba(250, 248, 248, 0.51);
 }
 .job {
   border-bottom: 1rpx solid #efefef;

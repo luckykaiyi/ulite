@@ -1,0 +1,23 @@
+/**detail.wxss**/
+page {
+  background: #efefef;
+}
+.job {
+  font-size: 30rpx;
+}
+.title {
+  padding: 20rpx 40rpx;
+  background-color: #09bb07;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.content {
+  display: block;
+  padding: 20rpx 40rpx;
+  line-height: 1.5;
+  word-break: break-all;
+}

@@ -3,24 +3,31 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {}
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    topics: []
   },
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
+    this.getTopics();
+  },
+  getTopics: function() {
+    var self = this;
+    wx.request({
+      url: 'https://youdingyue.luckykaiyi.com/topic',
+      success: function (res) {
+        var topics = res.data.filter(function(item) {
+          return item.total > 0;
+        }).sort(function (a, b) {
+          return b.total - a.total;
+        });
+        self.setData({
+          topics: topics
+        })
+      }
     })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '邮订阅',
+      path: '/pages/index/index'
+    }
   }
 })

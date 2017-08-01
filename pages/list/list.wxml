@@ -1,0 +1,15 @@
+<!--list.wxml-->
+<view class="topic" wx:if="{{topic}}">
+  <view class="infos">
+    <view class="name"> {{topic.topic}}</view>
+    <view class="total"> Total: {{topic.total}}</view>
+  </view>
+  <view class="jobs">
+    <block wx:for="{{topic.jobs}}" wx:for-item="job">
+      <navigator class="job" url="../detail/detail?id={{job.id}}">
+        <text class="source">{{job.source}}</text>
+        <text>{{job.title}}</text>
+      </navigator>   
+    </block>
+  </view>
+</view>
